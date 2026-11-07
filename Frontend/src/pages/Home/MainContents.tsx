@@ -8,6 +8,36 @@ export function DefaultSections(): Section[] {
     var counter4 = 0;
 
     const sections: Section[] = [
+        new Section("1", "Introduction:", (<p>
+            My name is Matthew Short, and I am a second year cyber security student at the University of Warwick. 
+            
+            My main area of interest in cyber security is programming, however I also really enjoy reverse engineering.
+        </p>)),
+        new Section("1", "About Me:", (<p>
+            Background,
+            How i got into programming,
+            Interests outside of programming
+        </p>)),
+        new Section("1", "Technical Skills:", (<p>
+            Programming languages
+            Frameworks and libraries
+            Development Tools
+            Databases
+            Technical skills
+        </p>)),
+        new Section("1", "Education:", (<p>
+            Uni
+            Schools
+            Relevant Modules
+        </p>)),
+        new Section("1", "Experience:", (<p>
+            Work experience
+            Small summary of projects
+        </p>)),
+        
+
+
+
         new Section("1", "First Section", (<p>No Contents</p>)),
         new Section("2", "First Subsection", (<p>Yurppp</p>)),
         new Section("2", "Second Subsection", (<p>Yaergaerpp</p>)),

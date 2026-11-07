@@ -3,6 +3,7 @@ import "./App.css"
 import  Home  from './pages/Home/main';
 import  Tests  from './pages/Tests';
 import NotFound from './pages/NotFound/main';
+import AltHome from './pages/AltHome/main';
 
 
 function App() {
@@ -10,6 +11,8 @@ function App() {
     <div className='app'>
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/alt" element={<AltHome/>} />
+        
         <Route path="/tests" element={<Tests/>} />
 
         <Route path="*" element={<NotFound/>} />

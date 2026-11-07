@@ -58,13 +58,13 @@
 }
 
 .sidebar-contents {
-    padding: 8px;
     padding-top: 0;
+    scroll-margin-top: 40px;
 }
 .sidebar-contents h1 {
+    padding: 0;
     font-size: 16px;
     font-weight: 1000;
-    padding: 0;
 }
 
 .sidebar-section {
@@ -73,6 +73,9 @@
     text-align: left;
     cursor: pointer;
     border-radius: 6px;
+    padding-left: 8px;
+
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.1);
 }
 .sidebar-section:hover {
     background: rgba(255, 255, 255, 0.2);

@@ -1,0 +1,171 @@
+:root {
+    --blue-background: rgb(15, 23, 49);
+
+    --unselected-text-colour: #999
+}
+
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    background: #256e70;
+    background: radial-gradient(circle at 80% 20%, rgba(37, 110, 112, 1) 0%, rgba(0, 0, 66, 1) 44%, rgba(2, 0, 36, 1) 100%);
+}
+
+.main {
+    background: inherit;
+}
+
+
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+
+    width: 100vw;
+    height: 5vh;
+
+    background: transparent;
+
+    color: var(--unselected-text-colour);
+    font-size: 14px;
+    font-weight: 500;
+
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.tab {
+    display: flex;
+
+    padding: 8px;
+    text-align: center;
+    align-items: center;
+
+    min-width: 5vh;
+    
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+
+    color: inherit;
+
+    transition: background 0.2s ease, transform 0.2s
+}
+.open-tab {
+    box-shadow: 0 4px 16px 6px rgba(0, 0, 0, 0.2);
+}
+.clickable-tab.open-tab::after {
+    content: "";
+    position: absolute;
+
+    left: -1px;
+    bottom: 0;
+    width: 1px;
+    height: 5px;
+
+    background: rgba(255, 255, 255, 0.2);
+}
+.clickable-tab {
+    position: relative;
+    cursor: pointer;
+    overflow: visible;
+}
+.clickable-tab::before {
+    content: "";
+    position: absolute;
+
+    top: -5px;
+    left: 50%;
+
+    height: 0px;
+    width: 100%;
+
+    background: rgb(0, 255, 255);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+    transform: translateX(-50%);
+    transition: height 0.2s ease;
+}
+.top-bar .clickable-tab::before {
+    box-shadow: 0 5px 12px 5px rgba(0, 255, 255, 0.2);
+}
+.bottom-bar .clickable-tab::before {
+    box-shadow: 0 calc(5vh + 5px) 12px 5px rgba(0, 255, 255, 0.2);
+}
+
+
+.clickable-tab.open-tab::before,
+.open-tab::before {
+    height: 5px;
+}
+
+.clickable-tab:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.clickable-tab.open-tab {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(5px);
+}
+
+
+
+.tab span {
+    width: 100%;
+}
+.name-tab {
+    width: 250px;
+    text-align: left;
+}
+.contact-tab {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tag-gap {
+    display: flex;
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+
+
+
+.bottom-bar {
+    z-index: 1;
+    display: flex;
+    top: auto;
+
+    width: 100vw;
+    height: 5vh;
+    
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: transparent;
+
+    color: var(--unselected-text-colour);
+    font-size: 14px;
+    font-weight: 500;
+
+    box-shadow: 0 -4px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.social-icon {
+    font-size: 20px;
+}

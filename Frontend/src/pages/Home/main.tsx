@@ -5,7 +5,7 @@ import { DefaultSections } from "./MainContents"
 
 
 export class Section {
-    constructor(level: string, title: string, contents: ReactElement<any, any>) {
+    constructor(level: string, title: string, contents: ReactElement<any, any> | null = null) {
         this.level = level
         this.title = title
         this.id = "NO ID"
@@ -15,7 +15,7 @@ export class Section {
     level: string
     title: string
     id: string = "NO ID"
-    contents: ReactElement<any, any>
+    contents: ReactElement<any, any> | null
 }
 
 
